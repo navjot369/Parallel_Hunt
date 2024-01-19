@@ -1,4 +1,4 @@
-import Glowbutton from "@/app/util/glowbutton";
+import Glowbutton from "../../../util/glowbutton";
 
 export default function SigninSec() {
     return(<div className="w-full flex flex-row justify-center items-center">
