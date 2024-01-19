@@ -8,10 +8,15 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'glowback' : 'linear-gradient(135deg, #ffdd65 2.76%, #ffaa5c 29.66%, #ff49c0 61%, #8e59ff 99.93%)',
+        'bgparallax1' : 'url(/Images/img2.jpg)'
       },
+      shadows: {
+        'shadow1' : '10px 10px 2px 2px #ae5eff'
+      },
+      color: {
+        'primary' : "#232323"
+      }
     },
   },
   plugins: [],
