@@ -19,8 +19,8 @@ export default function Navbar({isLogin}) {
         if(window.innerWidth > 690) setOpen(false);
       })});
     return(
-    <div className="fixed top-0 left-0 right-0 bg-[#232323] z-50 backdrop-blur-xl bg-opacity-80">
-        <div className="flex flex-row justify-between items-center py-3 px-8">
+    <div className="fixed top-0 left-0 right-0 bg-[#232323] z-40 backdrop-blur-xl bg-opacity-80">
+        <div className="flex flex-row justify-between items-center py-3 px-8 z-50">
         <div className="text-white text-2xl font-bold">Parallel Hunt</div>
         <div className="hidden md:flex flex-row justify-center items-center h-full">
             <Link href="/" className="text-[#eee] text-lg font-bold mx-4">Home</Link>
@@ -34,7 +34,9 @@ export default function Navbar({isLogin}) {
         <button className="text-xl border-2 mx-4 border-[#ae5eff] text-[#ae5eff] py-1 px-3 rounded-md shadow-[3px_3px_0_0_#ae5eff] hover:shadow-none duration-500" onClick={() => {setOpen(!isOpen)}}>{isOpen? <span>&#x78;</span>:<span>&#8801;</span>}</button>
         </div>
     </div>
-    <div className="py-8 duration-300 transition-all">
+    <div className={clsx("w-64 top-[64px] py-8 duration-500 transition-all bg-[#232323] backdrop-blur-xl bg-opacity-80 z-40 fixed h-screen",
+    {"right-0" : isOpen,
+    "-right-96" : !isOpen})}>
     <div className="flex flex-col justify-center items-center h-full">
             <Link href="/" className="text-[#eee] text-lg font-bold mx-4">Home</Link>
             <Link href="/" className="text-[#eee] text-lg font-bold mx-4">About</Link>
