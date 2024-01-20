@@ -12,7 +12,7 @@ export default function Page() {
     address: ""
   });
   const [data, setdata] = useState([]);
-  const [imgdata, setimgdata] = useState([]);
+  const [imgdata, setimgdata] = useState("/Images/noprofile.png");
   useEffect(() => {
     axios.get("https://parallel-hunt-backend-1.onrender.com/person").then(
       function(response) {
@@ -22,7 +22,7 @@ export default function Page() {
 
     axios.get("https://parallel-hunt-backend-1.onrender.com/getImage").then(
       function(response) {
-          setimgdata(response.data);
+          // setimgdata(response.data);
       }
     );
       setLogin(localStorage.getItem("name"));
@@ -31,9 +31,9 @@ export default function Page() {
     if(filters.address.length == 0 && filters.skills.length == 0 && filters.education.length == 0) {
       return true;
     }
-    if(filters.address.length > 0 && !ele.personal.address.includes(filters.address)){return false;}
-    if(filters.skills.length > 0 && !ele.professional.skills.includes(filters.skills)){return false;}
-    if(filters.education.length > 0 && !ele.professional.education.includes(filters.education)){return false}
+    if(filters.address.length > 0 && !ele.personal.address.toLowerCase().includes(filters.address)){return false;}
+    if(filters.skills.length > 0 && !ele.professional.skills.toLowerCase().includes(filters.skills)){return false;}
+    if(filters.education.length > 0 && !ele.professional.education.toLowerCase().includes(filters.education)){return false}
     return true;
   });
 
@@ -53,15 +53,15 @@ export default function Page() {
 
 function Box({ obj, imgData }) {
   const [imgsrc, setsrc] = useState("/Images/noprofile.png");
-  useEffect(() => {
-    getImage();
-  }, []);
+  // useEffect(() => {
+  //   getImage();
+  // }, []);
 
-  const getImage = async () => {
-  const result = await axios.get(`https://parallel-hunt-backend-1.onrender.com/getImage?email=${obj.personal.Email}`);
-  console.log(result);
-  setsrc(result.data.data);
-};
+  // const getImage = async () => {
+  // const result = await axios.get(`https://parallel-hunt-backend-1.onrender.com/getImage?email=${obj.personal.Email}`);
+  // console.log(result);
+  // setsrc(result.data.data);
+// };
     return(<div className="flex w-full lg:w-5/6 rounded-lg flex-row items-center box-border justify-between mx-auto my-2 bg-white">
         <div className="flex flex-row items-stretch justify-start ">
             <div className="aspect-square w-fit p-2 h-full rounded-l-lg bg-glowback">

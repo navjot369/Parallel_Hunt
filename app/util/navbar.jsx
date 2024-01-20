@@ -5,13 +5,17 @@ import { usePathname} from 'next/navigation';
 import { clsx } from 'clsx';
 
 
-export default function Navbar({ isLogin }) {
+export default function Navbar() {
     const arr = [
         {name: "Home", url: "/"},
         {name: "About", url: "/about"},
         {name: "Contact", url: "/contact"},
         {name: "Team", url: "/team"},
     ]
+    const [isLogin, setLogin ] = useState("");
+  useEffect(() => {
+    setLogin(localStorage.getItem("name"));
+  }, []);
     const pathname = usePathname();
     const [isOpen, setOpen] = useState(false);
     useEffect(() => {
@@ -27,8 +31,8 @@ export default function Navbar({ isLogin }) {
             <Link href="/" className="text-[#eee] text-lg font-bold mx-4">About</Link>
             <Link href="/" className="text-[#eee] text-lg font-bold mx-4">Contact</Link>
             <Link href="/" className="text-[#eee] text-lg font-bold mx-4">Team</Link>
-            {isLogin === ""? <Link href="/login" className="text-lg border-2 mx-4 border-[#ae5eff] text-[#ae5eff] py-1 px-3 rounded-md shadow-[3px_3px_0_0_#ae5eff] hover:shadow-none duration-500">Sign In</Link> : 
-            <Link href="/profile" className="text-lg border-2 mx-4 border-[#ae5eff] text-[#ae5eff] py-1 px-3 rounded-md shadow-[3px_3px_0_0_#ae5eff] hover:shadow-none duration-500">Profile</Link>}
+            {isLogin && isLogin.length>0 ? <Link href="/profile" className="text-lg border-2 mx-4 border-[#ae5eff] text-[#ae5eff] py-1 px-3 rounded-md shadow-[3px_3px_0_0_#ae5eff] hover:shadow-none duration-500">Profile</Link> : 
+            <Link href="/login" className="text-lg border-2 mx-4 border-[#ae5eff] text-[#ae5eff] py-1 px-3 rounded-md shadow-[3px_3px_0_0_#ae5eff] hover:shadow-none duration-500">Log In</Link>}
         </div>
         <div className="flex items-center md:hidden">
         <button className="text-xl border-2 mx-4 border-[#ae5eff] text-[#ae5eff] py-1 px-3 rounded-md shadow-[3px_3px_0_0_#ae5eff] hover:shadow-none duration-500" onClick={() => {setOpen(!isOpen)}}>{isOpen? <span>&#x78;</span>:<span>&#8801;</span>}</button>
