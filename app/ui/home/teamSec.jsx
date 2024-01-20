@@ -17,7 +17,7 @@ export default function TeamSec() {
         })
     }
     return(
-    <GlowCont><div className="bg-bgteam bg-no-repeat bg-cover max-w-6xl w-full mx-auto rounded-2xl p-2 grid grid-cols-[1fr_2fr]" onMouseOut={() => handleOut()}>
+    <GlowCont><div className="bg-bgteam bg-no-repeat bg-cover max-w-6xl w-full mx-auto rounded-2xl p-2 grid grid-cols-[1fr_2fr]" id="team" onMouseOut={() => handleOut()}>
         <div className="grid grid-cols-2 gap-4 p-4">
             <Image src="/Images/sumanyu_photo.jpeg" width="200" height="400" className="rounded-lg m-1 bg-red-100 w-full h-64 hover:shadow-inner hover:drop-shadow-2xl hover:scale-105 duration-300" alt="Person's display" onMouseOver={() => setContent({title: "Sumanyu Sharma", cont: "Back-end Developer"})}/>
             <Image src="/Images/navjot_photo.jpeg" width="200" height="400" className="rounded-lg m-1 bg-red-100 w-full h-64  hover:shadow-inner hover:drop-shadow-2xl hover:scale-105 duration-300"  alt="Person's display" onMouseOver={() => setContent({title: "Navjot Singh", cont: "Front-end Developer"})}/>

@@ -2,7 +2,7 @@
 import GlowCont from "../../util/glowCont";
 
 export default function ContactUs() {
-    return(<div className="bg-slate-100 w-full p-1 mt-20  rounded-b-3xl">
+    return(<div className="bg-slate-100 w-full p-1 mt-20  rounded-b-3xl" id="contact">
         <div className="bg-[#232323] max-w-6xl my-11 mx-auto rounded-3xl grid grid-cols-2 p-2">
             <div className="text-white text-6xl text-center">
                 <h2 className="my-11 font-bold">Contact Us</h2>

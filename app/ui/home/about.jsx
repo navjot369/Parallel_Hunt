@@ -2,7 +2,7 @@ import GlowImg from "../../util/imgContglow";
 
 export default function AboutSec() {
   return (
-    <div className="bg-white w-full p-1 mb-20">
+    <div className="bg-white w-full p-1 mb-20" id="about">
       <div className="w-4/5 max-w-6xl mx-auto bg-[#232323] rounded-3xl p-4 pr-11 mt-8 mb-24">
         <h1 className="text-center text-yellow-400 text-5xl my-8 first-letter:font-bold">
           About Us
