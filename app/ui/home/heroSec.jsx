@@ -1,8 +1,8 @@
 import GlowImg from "../../util/imgContglow";
 
 export default function HeroSec() {
-    return(<div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto my-6 md:my-28">
-        <div className="p-4 flex flex-col items-center md:items-start justify-evenly">
+    return(<div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl h-auto md:h-screen mx-auto mt-20 md:mt-0">
+        <div className="px-4 flex flex-col items-center md:items-start justify-center">
             <div className="text-5xl font-bold flex flex-col items-center md:items-start mb-4">
             <h1 className="my-2 text-yellow-400">Win fast.</h1>
             <h1 className="my-2 text-pink-600">Win more.</h1>

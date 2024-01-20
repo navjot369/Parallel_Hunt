@@ -18,3 +18,8 @@ body {
   background-color: #232323;
   box-sizing: border-box;
 }
+
+::-webkit-progress-value {
+  background-color: yellow;
+  background-image: linear-gradient(135deg, #ffdd65 2.76%, #ffaa5c 29.66%, #ff49c0 61%, #8e59ff 99.93%);
+}

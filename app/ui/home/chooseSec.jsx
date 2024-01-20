@@ -14,7 +14,7 @@ export default function ChooseSec() {
                         <p className="text-md p-1 font-bold text-center">Discover a diverse community of talented individuals ready to join forces with you on your next project, hackathon, or startup venture</p>
                     </div>
                     </div>
-                    <Link href="/" className="w-fit block mx-auto my-11 bg-white rounded-full py-2 px-4 font-bold text-[#232323] text-xl duration-300 hover:bg-slate-300">Find Person</Link>
+                    <Link href="/people" className="w-fit block mx-auto my-11 bg-white rounded-full py-2 px-4 font-bold text-[#232323] text-xl duration-300 hover:bg-slate-300">Find Person</Link>
                     </div></GlowCont>
                 <GlowCont><div className="p-2 h-96 group">
                     <div className="relative w-full overflow-hidden rounded-t-3xl">
@@ -23,7 +23,7 @@ export default function ChooseSec() {
                         <p className="text-md p-1 font-bold text-center">Unlock new opportunities and immerse yourself in the dynamic world of innovation and collaboration.</p>
                     </div>
                     </div>
-                    <Link href="/"  className="w-fit block mx-auto my-11 bg-white rounded-full py-2 px-4 font-bold text-[#232323] text-xl duration-300 hover:bg-slate-300">Events</Link>
+                    <Link href="/events"  className="w-fit block mx-auto my-11 bg-white rounded-full py-2 px-4 font-bold text-[#232323] text-xl duration-300 hover:bg-slate-300">Events</Link>
                     </div></GlowCont>
             </div>
         </div>
