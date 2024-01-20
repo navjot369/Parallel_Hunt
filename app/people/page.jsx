@@ -103,8 +103,8 @@ function Filters({ filters, changefun }) {
     });
     setApply(false);
   }
-  return(<div className="w-full md:w-4/5 my-11 mx-auto">
-    {applyFil? <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 h-16 gap-4">
+  return(<div className="w-4/5 my-11 mx-auto p-1">
+    {applyFil? <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
     <GlowCont><select name="fil_skills" onChange={handleChange} className="py-2 px-4 m-0 w-full">
       <option disabled selected>Skills</option>
       <option value="python">Python</option>
@@ -128,7 +128,9 @@ function Filters({ filters, changefun }) {
     <GlowCont>
       <input name="fil_address" onChange={handleChange} className="py-2 px-4 w-full" placeholder="Address"/>
     </GlowCont>
-    <button onClick={handleCancel} className="w-fit mx-auto h-16 py-2 px-4 bg-white rounded-full text-xl font-bold">Cancel</button>
+    <GlowCont>
+    <button onClick={handleCancel} className="w-full mx-auto py-2 px-4 bg-white rounded-full text-xl font-bold">Cancel</button>
+    </GlowCont>
     </div> : <div className="flex flex-row justify-end w-full">
       <button onClick={() => setApply(true)} className="text-white py-2 px-4 bg-glowback text- rounded-full font-bold flex items-center"><Image src="./Images/setting-svg.svg" width="100" height="100" className="w-5 h-5 pr-1"/> Filters</button>
       </div>}
@@ -137,8 +139,8 @@ function Filters({ filters, changefun }) {
 
 function GlowCont({children}) {
   return(
-      <div className="relative w-full rounded-3xl bg-glowback m-4 p-2">
-          <div className="absolute top-0 left-0 right-0 bottom-0 p-4 bg-glowback blur-lg rounded-3xl"></div>
+      <div className="relative w-full rounded-3xl bg-glowback m-2 p-1">
+          <div className="absolute top-0 left-0 right-0 bottom-0 p-2 bg-glowback blur-lg rounded-3xl"></div>
           <div className="relative rounded-3xl bg-[#232323] overflow-hidden">
               {children}
           </div>

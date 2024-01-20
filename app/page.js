@@ -14,7 +14,7 @@ export default function Home() {
   return(<div>
     <Navbar isLogin={isLogin}/>
     <HeroSec />
-    {isLogin.length>0?
+    {isLogin && isLogin.length>0?
     <ChooseSec /> : <SigninSec />}
     <div className="w-full h-screen"></div>
     </div>
