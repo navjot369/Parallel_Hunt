@@ -28,9 +28,9 @@ export default function Navbar() {
         <div className="text-white text-2xl font-bold"><Link href="/">Parallel Hunt</Link></div>
         <div className="hidden md:flex flex-row justify-center items-center h-full">
             <Link href="/" className="text-[#eee] text-lg font-bold mx-4">Home</Link>
-            <Link href="/" className="text-[#eee] text-lg font-bold mx-4">About</Link>
-            <Link href="/" className="text-[#eee] text-lg font-bold mx-4">Contact</Link>
-            <Link href="/" className="text-[#eee] text-lg font-bold mx-4">Team</Link>
+            <Link href="/#about" scroll={true} className="text-[#eee] text-lg font-bold mx-4">About</Link>
+            <Link href="/#team" scroll={true} className="text-[#eee] text-lg font-bold mx-4">Team</Link>
+            <Link href="/#contact" scroll={true} className="text-[#eee] text-lg font-bold mx-4">Contact</Link>
             {isLogin && isLogin.length>0 ? <Link href="/profile" className="text-lg border-2 mx-4 border-[#ae5eff] text-[#ae5eff] py-1 px-3 rounded-md shadow-[3px_3px_0_0_#ae5eff] hover:shadow-none duration-500">Profile</Link> : 
             <Link href="/login" className="text-lg border-2 mx-4 border-[#ae5eff] text-[#ae5eff] py-1 px-3 rounded-md shadow-[3px_3px_0_0_#ae5eff] hover:shadow-none duration-500">Log In</Link>}
         </div>

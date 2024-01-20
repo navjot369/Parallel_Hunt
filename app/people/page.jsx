@@ -12,7 +12,7 @@ export default function Page() {
     address: ""
   });
   const [data, setdata] = useState([]);
-  const [imgdata, setimgdata] = useState("/Images/noprofile.png");
+  const [imgdata, setimgdata] = useState([]);
   useEffect(() => {
     axios.get("https://parallel-hunt-backend-1.onrender.com/person").then(
       function(response) {
@@ -20,9 +20,10 @@ export default function Page() {
       }
     );
 
-    axios.get("https://parallel-hunt-backend-1.onrender.com/getImage").then(
+    axios.get("https://parallel-hunt-backend-1.onrender.com/get-images").then(
       function(response) {
-          // setimgdata(response.data);
+        console.log(response);
+        setimgdata(response.data);
       }
     );
       setLogin(localStorage.getItem("name"));
@@ -52,20 +53,13 @@ export default function Page() {
 }
 
 function Box({ obj, imgData }) {
-  const [imgsrc, setsrc] = useState("/Images/noprofile.png");
-  // useEffect(() => {
-  //   getImage();
-  // }, []);
-
-  // const getImage = async () => {
-  // const result = await axios.get(`https://parallel-hunt-backend-1.onrender.com/getImage?email=${obj.personal.Email}`);
-  // console.log(result);
-  // setsrc(result.data.data);
-// };
+  let src1 = imgData.find((ele) => ele.email === obj.personal.Email);
+  let source = src1 == undefined? '/Images/noprofile.png' : src1.url;
+  console.log(src1);
     return(<div className="flex w-full lg:w-5/6 rounded-lg flex-row items-center box-border justify-between mx-auto my-2 bg-white">
         <div className="flex flex-row items-stretch justify-start ">
             <div className="aspect-square w-fit p-2 h-full rounded-l-lg bg-glowback">
-              <Image src={imgsrc} width="100" height="100" className="rounded-full" alt="Profile"/>
+              <img src={source} width="100" height="100" className="rounded-full h-24 w-24" alt="Profile"/>
             </div>
             <div className="p-2">
                 <h2 className="font-bold text-xl -mb-1">{obj.personal.name}</h2>

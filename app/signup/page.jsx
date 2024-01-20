@@ -125,11 +125,11 @@ export default function SignUp() {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append("testImage", image);
+    formData.append("image", image);
     formData.append("email", email);
 
     const result = await axios.post(
-      "https://parallel-hunt-backend-1.onrender.com/upload",
+      "https://parallel-hunt-backend-1.onrender.com/upload-image",
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },

@@ -4,6 +4,10 @@ import ChooseSec from "./ui/home/chooseSec.jsx";
 import SigninSec from "./ui/home/not-signed/signinSec.jsx";
 import Navbar from "./util/navbar.jsx";
 import { useState , useEffect } from "react";
+import AboutSec from './ui/home/about.jsx';
+import TeamSec from './ui/home/teamSec.jsx';
+import ContactUs from './ui/home/contactSec.jsx';
+import Footer from './util/footer.jsx';
 
 
 export default function Home() {
@@ -16,7 +20,10 @@ export default function Home() {
     <HeroSec />
     {isLogin && isLogin.length>0?
     <ChooseSec /> : <SigninSec />}
-    <div className="w-full h-screen"></div>
+    <AboutSec />
+    <TeamSec />
+    <ContactUs />
+    <Footer />
     </div>
   );
 }

@@ -3,8 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function ChooseSec() {
-    return(<div className="bg-fixed bg-bgparallax1 w-full p-1">
-        <div className="w-full sm:w-4/5 mx-auto mt-14 mb-24 bg-[#5f5e5e] max-w-6xl rounded-lg p-2 md:p-6 backdrop-blur-md bg-opacity-90">
+    return(<div className="bg-fixed bg-bgparallax1 w-full pt-1 relative">
+        <div className="w-full sm:w-4/5 mx-auto mt-14 mb-40 bg-[#5f5e5e] max-w-6xl rounded-lg p-2 md:p-6 backdrop-blur-md bg-opacity-90">
             <h2 className="text-white text-center text-4xl font-bold mb-11">Discover & Connect</h2>
             <div className="flex flex-col md:flex-row justify-center items-center mt-0 translate-y-0 md:-mt-24 md:translate-y-24">
                 <GlowCont><div className="p-2 h-96 group">
@@ -27,5 +27,6 @@ export default function ChooseSec() {
                     </div></GlowCont>
             </div>
         </div>
+        <div className="aboslute bottom-0 left-0 right-0 rounded-t-full bg-white h-16 w-full" id="about"></div>
     </div>);
 }
